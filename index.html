@@ -1,55 +1,75 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a2828">
-  <meta name="description" content="FluxTools: desenvolvedora do FinControl para Android. Informações oficiais, privacidade e suporte.">
-  <meta name="robots" content="index,follow">
-  <title>FluxTools · FinControl para Android</title>
-  <style>
-    :root{color-scheme:dark;--bg:#091719;--card:#102629;--line:#28504a;--mint:#91e5c8;--muted:#b7d0c9;--text:#f6fffa}
-    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 4%,#154d40 0,transparent 36%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
-    a{color:var(--mint)}.wrap{width:min(100% - 40px,1024px);margin:auto}
-    header{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--line)}
-    .brand{font-weight:900;letter-spacing:.06em;font-size:20px}.brand span{color:var(--mint)}
-    .tag{color:var(--muted);font-size:13px}nav{display:flex;flex-wrap:wrap;gap:18px}nav a{font-size:14px;text-decoration:none}
-    main{padding:70px 0 40px}.eyebrow{display:inline-block;color:var(--mint);font-weight:800;letter-spacing:.12em;font-size:12px}
-    h1{font-size:clamp(37px,6vw,65px);letter-spacing:-.05em;line-height:1.1;max-width:720px;margin:18px 0}
-    h1 em{font-style:normal;color:var(--mint)}.lead{font-size:18px;max-width:580px;color:var(--muted)}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 64px}
-    .btn{background:var(--mint);color:#07221d;border:1px solid var(--mint);border-radius:13px;padding:13px 20px;font-weight:800;text-decoration:none}
-    .btn.outline{background:transparent;color:var(--mint)}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .panel{background:linear-gradient(150deg,#143a33,#0f2225);border:1px solid var(--line);border-radius:18px;padding:23px}
-    .panel h2{font-size:18px;margin:0 0 9px}.panel p{color:var(--muted);margin:0;font-size:14px}
-    .note{max-width:760px;border-left:3px solid var(--mint);padding:8px 0 8px 15px;color:var(--muted);margin-top:45px}
-    footer{border-top:1px solid var(--line);margin-top:52px;padding:25px 0 35px;color:var(--muted);font-size:13px}
-    @media(max-width:720px){.grid{grid-template-columns:1fr}header{align-items:flex-start;gap:15px;flex-direction:column}main{padding-top:49px}.buttons{margin-bottom:45px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09191c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index,follow">
+<meta name="description" content="FinControl é um aplicativo Android para organizar receitas, despesas e orçamentos mensais. Conheça as funcionalidades, dicas de controle financeiro e baixe na Google Play.">
+<link rel="canonical" href="https://thealbum0207-art.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="FluxTools">
+<meta property="og:title" content="FinControl | Seu dinheiro sob controle">
+<meta property="og:description" content="Organize receitas, despesas e orçamentos em um aplicativo simples para Android. Confira o FinControl na Google Play.">
+<meta property="og:url" content="https://thealbum0207-art.github.io/">
+<meta name="twitter:card" content="summary">
+<title>FinControl: controle de gastos e orçamento | FluxTools</title>
+<style>
+:root{color-scheme:dark;--bg:#081518;--bg2:#0a1c20;--card:#10262b;--edge:#285352;--text:#f2fffc;--muted:#aac5c1;--mint:#7ef2c7;--mint2:#25c99a;--focus:#bdfbdd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 5%,#12493d80,transparent 37%),linear-gradient(180deg,var(--bg),#081517 72%,#0b1b1d);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--mint)}a:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:4px}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+.skip{position:absolute;left:12px;top:-100px;z-index:9;padding:10px;background:var(--mint);color:#041d17}.skip:focus{top:10px}
+header{border-bottom:1px solid #ffffff17;position:relative;z-index:2;background:#081719cc;backdrop-filter:blur(12px)}
+nav.top{display:flex;align-items:center;justify-content:space-between;min-height:82px;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-size:19px;font-weight:800;letter-spacing:.01em}.brand b{color:var(--mint)}.brandmark{display:grid;place-items:center;width:43px;height:43px;border:1px solid #5fe3ba80;background:linear-gradient(150deg,#14574c,#09242a);border-radius:13px;flex-shrink:0}.links{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.links a{font-size:14px;color:#d5ede6;text-decoration:none}.links a:hover{color:var(--mint)}
+.navcta{border:1px solid #53cda7;padding:8px 14px;border-radius:12px;font-weight:700}
+main section{scroll-margin-top:25px}.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:42px;align-items:center;padding:90px 0 75px}.eyebrow{font-size:12px;font-weight:850;letter-spacing:.15em;color:var(--mint);text-transform:uppercase}.hero h1{font-size:clamp(40px,5.4vw,70px);letter-spacing:-.05em;line-height:1.07;margin:18px 0 22px}.hero h1 em{color:var(--mint);font-style:normal}.lead{font-size:18px;color:var(--muted);max-width:590px;margin:0}.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:31px 0 22px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:14px;text-decoration:none;font-weight:850;background:var(--mint);border:1px solid var(--mint);color:#062119;box-shadow:0 12px 32px #17b98222;transition:transform .2s ease}.btn:hover{transform:translateY(-2px)}.btn.secondary{color:var(--mint);background:transparent;box-shadow:none}.fact{color:#aac5c1;font-size:13px}.facts{display:flex;gap:12px 22px;flex-wrap:wrap;list-style:none;padding:0;margin:27px 0 0}.facts li:before{content:"✓";color:var(--mint);font-weight:900;margin-right:7px}
+.phone-area{position:relative;min-height:610px;display:grid;place-items:center}.glow{position:absolute;width:95%;height:80%;border-radius:50%;background:radial-gradient(circle,#23cba13a 0,transparent 67%);filter:blur(18px)}
+.phone{position:relative;width:min(100%,315px);background:#091419;border:7px solid #22403d;border-radius:43px;box-shadow:0 27px 80px #0009,0 0 0 1px #8cecc252;padding:32px 16px 22px;transform:rotate(4deg)}.phone:before{content:"";width:100px;height:15px;background:#050e11;border-radius:0 0 12px 12px;position:absolute;top:0;left:50%;transform:translateX(-50%)}
+.phhead{display:flex;gap:9px;align-items:center;margin:7px 0 26px}.phhead strong{font-size:22px}.phhead small{display:block;color:#bdd5ce;font-size:10px}.phicon{width:32px;height:32px;border-radius:9px;background:#0f4c40;display:grid;place-items:center;color:var(--mint);font-size:23px}
+.phmonth{text-align:center;margin-bottom:22px;color:#d3e8e3;font-weight:700}.phmonth small{font-size:10px;letter-spacing:.15em;color:var(--muted);display:block}.phbalance{background:linear-gradient(130deg,#134c43,#0d232b);padding:22px;border-radius:22px;border:1px solid #2c554d}.phbalance small,.stat small{color:#b9dad0;font-size:11px;display:block}.phbalance strong{display:block;font-size:39px;letter-spacing:-.03em;margin:11px 0}.phbalance p{color:#aecdc4;font-size:11px;margin:0}.phstats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:11px}.stat{background:#182f35;border-radius:17px;padding:15px}.stat strong{font-size:19px}.empty{background:#162d31;border-radius:18px;padding:30px 16px;text-align:center;margin-top:12px;color:#cadfd9;font-size:12px}.empty span{font-size:29px;color:var(--mint);display:block}.tabs{display:flex;justify-content:space-between;gap:3px;color:#b9d3cb;font-size:11px;margin-top:21px}.tabs b{color:var(--mint)}
+.screen-note{position:absolute;bottom:0;right:0;font-size:12px;color:var(--muted);max-width:215px;text-align:right}
+.section{padding:70px 0}.sectop{max-width:790px;margin-bottom:34px}.sectop h2{font-size:clamp(28px,4vw,45px);line-height:1.16;letter-spacing:-.035em;margin:10px 0 15px}.sectop p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:linear-gradient(145deg,#113932,#10252b 85%);border:1px solid var(--edge);border-radius:22px;padding:28px;min-height:220px}.card svg{color:var(--mint);margin-bottom:18px}.card h3{font-size:20px;margin:0 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:how}.step{padding:26px;border:1px solid #ffffff25;border-radius:20px;background:#102326;counter-increment:how}.step:before{content:"0" counter(how);display:inline-grid;place-items:center;background:#173e36;color:var(--mint);font-weight:900;width:43px;height:43px;border-radius:14px}.step h3{margin:20px 0 8px}.step p{margin:0;color:var(--muted);font-size:14px}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:18px}.guide{display:block;padding:26px;border-radius:20px;border:1px solid #2e5952;background:linear-gradient(150deg,#123d35,#10242a);text-decoration:none;color:var(--text)}.guide:hover{border-color:var(--mint)}.guide strong{font-size:21px;display:block;margin:9px 0}.guide span{color:var(--mint);font-size:13px;font-weight:700}.guide p{color:var(--muted);font-size:14px;margin:10px 0 0}
+.disclosure{background:linear-gradient(120deg,#12372f,#102329);border:1px solid #397563;border-radius:22px;padding:28px;margin-top:34px}.disclosure h2{font-size:23px;margin:0 0 8px}.disclosure p{margin:0;color:#c3d9d2}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq article{background:#102429;border:1px solid #25504b;padding:22px;border-radius:18px}.faq h3{margin:0 0 10px;font-size:17px}.faq p{font-size:14px;color:var(--muted);margin:0}
+.bottomcta{text-align:center;background:radial-gradient(ellipse at top,#13544795,transparent 67%),#0c2627;border:1px solid #2d7e65;border-radius:28px;padding:56px 22px;margin:45px 0 70px}.bottomcta h2{font-size:clamp(30px,4vw,47px);letter-spacing:-.03em;margin:0 0 12px}.bottomcta p{color:#c4ded5;margin:0 auto 24px;max-width:550px}
+footer{border-top:1px solid #ffffff25;padding:30px 0 42px;color:var(--muted);font-size:13px}.foot{display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap}.foot a{color:#bfeee0;margin-right:15px}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:0;padding-top:65px}.phone-area{min-height:570px;margin-top:15px}.cards,.how{grid-template-columns:1fr 1fr}.screen-note{right:10px;bottom:3px}.links{gap:12px}.links a{font-size:13px}}
+@media(max-width:580px){.wrap{width:min(100% - 28px,1180px)}nav.top{align-items:flex-start;flex-direction:column;padding:16px 0;gap:14px}.links{gap:14px}.hero{padding:50px 0 30px}.hero h1{font-size:43px}.lead{font-size:16px}.phone-area{min-height:590px}.cards,.how,.mini,.faq{grid-template-columns:1fr}.section{padding:40px 0}.card{min-height:0}.fact{font-size:12px}.ctas .btn{width:100%}.screen-note{font-size:11px}.bottomcta{padding:38px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FinControl: Finanças Pessoais","applicationCategory":"FinanceApplication","operatingSystem":"Android","description":"Aplicativo para registrar receitas, despesas e orçamentos mensais.","url":"https://play.google.com/store/apps/details?id=com.app.fincontrol","publisher":{"@type":"Organization","name":"FluxTools","url":"https://thealbum0207-art.github.io/"}}</script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">FLUX<span>TOOLS</span> <span class="tag">· Aplicativos Android</span></div>
-    <nav aria-label="Navegação principal"><a href="#fincontrol">FinControl</a><a href="./privacy/">Privacidade</a><a href="./support/">Suporte</a></nav>
-  </header>
-  <main id="fincontrol">
-    <span class="eyebrow">DESENVOLVIMENTO DE APLICATIVOS</span>
-    <h1>Organize seu dinheiro.<br><em>Tenha mais clareza.</em></h1>
-    <p class="lead">Conheça o FinControl: Finanças Pessoais, aplicativo da FluxTools para registrar receitas, despesas e limites de orçamento de forma prática, com consulta local no Android.</p>
-    <div class="buttons">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.app.fincontrol" rel="noopener noreferrer">Ver FinControl na Google Play</a>
-      <a class="btn outline" href="./privacy/">Ler Política de Privacidade</a>
-    </div>
-    <section class="grid" aria-label="Principais funcionalidades">
-      <div class="panel"><h2>Receitas e despesas</h2><p>Cadastre suas movimentações e consulte o saldo dos lançamentos registrados.</p></div>
-      <div class="panel"><h2>Gastos por categoria</h2><p>Veja a distribuição de suas despesas para compreender melhor o mês.</p></div>
-      <div class="panel"><h2>Orçamentos mensais</h2><p>Defina limites por categoria e acompanhe o quanto já foi utilizado.</p></div>
-    </section>
-    <p class="note">O FinControl não é uma instituição bancária e não sincroniza contas bancárias. Os registros são armazenados localmente no dispositivo. Para informações sobre publicidade e dados técnicos, consulte a <a href="./privacy/">Política de Privacidade</a>.</p>
-  </main>
-  <footer><p>© 2026 FluxTools · Aplicativo Android: com.app.fincontrol · <a href="./support/">Suporte</a> · <a href="./privacy/">Privacidade</a></p></footer>
-</div>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header><nav class="top wrap" aria-label="Navegação principal">
+<a class="brand" href="./" aria-label="FluxTools, página inicial"><span class="brandmark" aria-hidden="true"><svg viewBox="0 0 36 36" width="31" height="31" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--mint)"><path d="M5 27l9-9 7 4 10-13M22 9h9v9"/></svg></span>FLUX<b>TOOLS</b></a>
+<div class="links"><a href="#recursos">Recursos</a><a href="#como-funciona">Como usar</a><a href="#guias">Guias gratuitos</a><a href="./support/">Suporte</a><a class="navcta" href="https://play.google.com/store/apps/details?id=com.app.fincontrol" rel="noopener noreferrer">Google Play ↗</a></div>
+</nav></header>
+<main id="conteudo" class="wrap">
+<section class="hero" aria-label="Apresentação do FinControl">
+<div><div class="eyebrow">FinControl · Finanças pessoais para Android</div><h1>Seu dinheiro,<br><em>sob controle.</em></h1><p class="lead">Organize receitas, despesas e limites de orçamento em um lugar só. Um jeito simples de enxergar seus lançamentos e planejar melhor o mês.</p><div class="ctas"><a class="btn" href="https://play.google.com/store/apps/details?id=com.app.fincontrol" rel="noopener noreferrer">Conhecer na Google Play ↗</a><a class="btn secondary" href="#recursos">Explorar funcionalidades ↓</a></div><ul class="facts"><li>Sem cadastro no app</li><li>Registros financeiros locais</li><li>Interface em português</li></ul><p class="fact">Aplicativo de organização pessoal. Não é instituição financeira nem conecta contas bancárias.</p></div>
+<div class="phone-area"><div class="glow" aria-hidden="true"></div><div class="phone" role="img" aria-label="Representação ilustrativa da tela Resumo do FinControl, mostrando saldo, receitas e despesas zerados">
+<div class="phhead"><div class="phicon" aria-hidden="true">↗</div><div><strong>FinControl</strong><small>Seu dinheiro sob controle</small></div></div><div class="phmonth"><small>PERÍODO</small>Outubro 2026</div>
+<div class="phbalance"><small>SALDO TOTAL REGISTRADO</small><strong>R$ 0,00</strong><p>Soma das movimentações cadastradas</p></div>
+<div class="phstats"><div class="stat"><small>↓ Receitas</small><strong>R$ 0,00</strong></div><div class="stat"><small>↑ Despesas</small><strong>R$ 0,00</strong></div></div>
+<div class="empty"><span>⌁</span>Nenhuma despesa neste mês<br>Os gráficos aparecem com seus registros.</div>
+<div class="tabs"><b>▣ Resumo</b><span>▤ Lançamentos</span><span>◉ Orçamentos</span></div></div><p class="screen-note">Prévia ilustrativa baseada na interface do aplicativo, sem dados financeiros reais.</p></div>
+</section>
+<section id="recursos" class="section"><div class="sectop"><span class="eyebrow">O que você consegue fazer</span><h2>Menos confusão, mais clareza sobre seus gastos.</h2><p>Comece com o essencial: registre os movimentos do dia a dia e consulte as informações por período.</p></div><div class="cards">
+<article class="card"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 15l3-3 3 2 4-5"/></svg><h3>Resumo mensal</h3><p>Consulte saldo, receitas, despesas e a distribuição dos gastos do mês selecionado.</p></article>
+<article class="card"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><h3>Lançamentos</h3><p>Registre receitas e despesas com valor, descrição, data e categoria. Pesquise e filtre movimentações.</p></article>
+<article class="card"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/></svg><h3>Orçamentos mensais</h3><p>Defina limites por categoria e acompanhe quanto foi utilizado em cada período.</p></article>
+</div></section>
+<section id="como-funciona" class="section"><div class="sectop"><span class="eyebrow">Simples para começar</span><h2>Três passos para organizar seu mês.</h2><p>Você não precisa conectar banco ou fornecer senha para registrar suas finanças pessoais.</p></div><div class="how"><article class="step"><h3>Abra o aplicativo</h3><p>Instale pela ficha oficial da Google Play e escolha o período que deseja acompanhar.</p></article><article class="step"><h3>Registre movimentações</h3><p>Inclua receitas e despesas conforme elas acontecem. Comece com dados que você conhece.</p></article><article class="step"><h3>Confira seu orçamento</h3><p>Volte ao resumo e aos limites por categoria para entender como o dinheiro foi distribuído.</p></article></div></section>
+<section id="guias" class="section"><div class="sectop"><span class="eyebrow">Aprenda sem custo</span><h2>Guias práticos de organização financeira.</h2><p>Conteúdo educativo, sem promessas de enriquecimento, para usar junto com seu controle de receitas e despesas.</p></div><div class="mini"><a class="guide" href="./guia-orcamento/"><span>Guia gratuito · Leitura rápida</span><strong>Como montar um orçamento mensal sem complicar</strong><p>Liste a renda, separe despesas e defina um limite que faça sentido para sua rotina.</p></a><a class="guide" href="./controle-despesas/"><span>Guia gratuito · Passo a passo</span><strong>Como registrar gastos e acompanhar o mês</strong><p>Organize lançamentos, categorias e revisões curtas para enxergar os números com clareza.</p></a></div><div class="disclosure"><h2>Transparência sobre dados e publicidade</h2><p>As movimentações financeiras são mantidas no dispositivo, conforme descrito na nossa <a href="./privacy/">Política de Privacidade</a>. O aplicativo inclui ferramentas de anúncios, que podem tratar dados técnicos. Consulte também a página de <a href="./support/">suporte</a> antes de excluir ou reinstalar o aplicativo.</p></div></section>
+<section id="duvidas" class="section"><div class="sectop"><span class="eyebrow">Perguntas frequentes</span><h2>O que você deve saber antes de começar.</h2></div><div class="faq"><article><h3>O FinControl acessa minha conta bancária?</h3><p>Não. O aplicativo não conecta contas bancárias: você registra manualmente as movimentações que deseja acompanhar.</p></article><article><h3>Onde ficam meus lançamentos?</h3><p>Os registros financeiros são armazenados localmente. Não desinstale nem limpe os dados do aplicativo sem compreender o risco de perda.</p></article><article><h3>Preciso criar uma conta?</h3><p>Não é necessário cadastrar login ou senha para usar as funções de organização financeira descritas aqui.</p></article><article><h3>Onde encontro ajuda?</h3><p>Visite a nossa <a href="./support/">central de suporte</a>. Nunca divulgue extratos, senhas ou informações pessoais em uma questão pública do GitHub.</p></article></div></section>
+<section class="bottomcta"><h2>Seu próximo passo começa com organização.</h2><p>Conheça o FinControl na loja oficial do Android e comece a registrar o que importa para você.</p><a class="btn" href="https://play.google.com/store/apps/details?id=com.app.fincontrol" rel="noopener noreferrer">Ver FinControl na Google Play ↗</a></section>
+</main>
+<footer><div class="wrap foot"><div>© 2026 FluxTools · FinControl: Finanças Pessoais · Android · <code>com.app.fincontrol</code></div><div><a href="./support/">Suporte</a><a href="./privacy/">Privacidade</a><a href="./sitemap.xml">Mapa do site</a></div></div></footer>
 </body>
 </html>
