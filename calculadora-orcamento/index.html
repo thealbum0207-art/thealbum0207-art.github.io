@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08191a">
+<meta name="description" content="Calculadora de orçamento mensal gratuita: some despesas, confira quanto sobra do salário e visualize os gastos por categoria. Sem cadastro.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://thealbum0207-art.github.io/calculadora-orcamento/">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Calculadora de orçamento mensal grátis | FluxTools">
+<meta property="og:description" content="Calcule receitas, despesas e saldo do mês, sem cadastro.">
+<meta property="og:url" content="https://thealbum0207-art.github.io/calculadora-orcamento/">
+<title>Calculadora de orçamento mensal grátis | FluxTools</title>
+<style>
+:root{color-scheme:dark;--bg:#07181b;--card:#112a2e;--edge:#28594f;--muted:#b9d3cd;--mint:#86efc8;--text:#f5fffc;--red:#ffa4aa}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0,#195b4c88,transparent 38%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--mint)}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #cbffe8;outline-offset:3px}
+.wrap{width:min(1040px,calc(100% - 34px));margin:auto}header{padding:22px 0;border-bottom:1px solid #ffffff20}.brand{font-weight:800;color:var(--text);text-decoration:none;letter-spacing:.04em}
+main{padding:46px 0 75px}.intro{max-width:790px}.eyebrow{font-size:12px;letter-spacing:.15em;font-weight:850;color:var(--mint)}h1{font-size:clamp(32px,5vw,55px);line-height:1.14;letter-spacing:-.04em;margin:12px 0 18px}.intro p{color:var(--muted);font-size:17px}
+.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:32px;align-items:start}
+.panel{border:1px solid var(--edge);background:linear-gradient(155deg,#103c33,#102429 73%);border-radius:23px;padding:28px}.panel h2{font-size:23px;margin:0 0 15px}p.note{color:var(--muted);font-size:13px}
+form{display:grid;gap:12px}.field{display:flex;align-items:center;justify-content:space-between;gap:12px}.field label{font-size:15px;font-weight:650;max-width:58%}
+.field input{color:var(--text);background:#092126;border:1px solid #497970;border-radius:11px;padding:10px 12px;max-width:155px;width:47%;font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
+.field input:focus{border-color:var(--mint)}.divider{border-top:1px solid #ffffff2c;margin:12px 0 7px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+button,.btn{border:1px solid var(--mint);background:var(--mint);color:#06231d;padding:12px 16px;border-radius:12px;font-weight:800;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}button.secondary{color:var(--mint);background:transparent}
+.highlight{background:linear-gradient(120deg,#135243,#0c252c);border:1px solid #498e79;border-radius:18px;padding:23px}
+.highlight small{color:var(--muted);font-size:13px}.highlight strong{display:block;font-size:37px;letter-spacing:-.03em;margin:8px 0 0}
+.totals{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.total{border-radius:15px;background:#152d30;padding:15px}.total small{font-size:12px;color:var(--muted)}.total strong{display:block;font-size:19px;margin-top:6px}
+.bars{margin-top:18px}.barrow{margin:14px 0}.barlabels{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#d5ece6}.track{height:9px;border-radius:99px;background:#24413e;overflow:hidden;margin-top:8px}.fill{width:0;height:100%;border-radius:99px;background:var(--mint);transition:width .1s}
+.narrative{padding:16px 18px;border-left:3px solid var(--mint);background:#0e2b2a;margin-top:16px;border-radius:0 10px 10px 0;font-size:14px}
+.next{margin-top:28px;border:1px solid #3a7c68;border-radius:20px;padding:24px;background:#12342f}.next h2{margin-top:0}.next p{color:var(--muted)}
+.lower{max-width:850px;margin-top:54px}.lower h2{font-size:27px}.lower p,.lower li{color:var(--muted)}footer{border-top:1px solid #ffffff26;padding:26px 0 38px;font-size:13px;color:var(--muted)}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.intro p{font-size:16px}}
+@media(max-width:480px){main{padding-top:35px}.panel{padding:18px}.field label{max-width:52%}.field input{width:48%;max-width:140px}.highlight strong{font-size:32px}.totals{grid-template-columns:1fr 1fr}.total strong{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+</style></head><body>
+<header><div class="wrap"><a href="../" class="brand">FLUXTOOLS</a> · Ferramentas gratuitas</div></header>
+<main class="wrap"><div class="intro">
+<span class="eyebrow">FERRAMENTA GRATUITA · SEM CADASTRO</span>
+<h1>Calculadora de orçamento mensal</h1>
+<p>Digite quanto você recebe e quanto gasta em cada categoria. Veja a soma de despesas, o saldo do mês e uma distribuição visual para planejar melhor.</p>
+<p class="note">Os valores digitados são processados somente neste navegador. Esta página não os envia para um servidor e não utiliza armazenamento local.</p>
+</div>
+<div class="layout">
+<section class="panel" aria-labelledby="entryTitle">
+<h2 id="entryTitle">Valores do mês</h2>
+<p class="note">Insira números em reais, sem símbolo de moeda. Exemplo: 2500 ou 2500,50.</p>
+<form id="budget" novalidate>
+<div class="field"><label for="income">Receita do mês</label><input id="income" name="income" type="text" inputmode="decimal" autocomplete="off" value="0" aria-describedby="helpValue"></div>
+<div class="divider" role="separator"></div>
+<div class="field"><label for="housing">Moradia</label><input id="housing" name="housing" type="text" inputmode="decimal" autocomplete="off" value="0"></div>
+<div class="field"><label for="food">Alimentação</label><input id="food" name="food" type="text" inputmode="decimal" autocomplete="off" value="0"></div>
+<div class="field"><label for="transport">Transporte</label><input id="transport" name="transport" type="text" inputmode="decimal" autocomplete="off" value="0"></div>
+<div class="field"><label for="health">Saúde</label><input id="health" name="health" type="text" inputmode="decimal" autocomplete="off" value="0"></div>
+<div class="field"><label for="education">Educação</label><input id="education" name="education" type="text" inputmode="decimal" autocomplete="off" value="0"></div>
+<div class="field"><label for="other">Outras despesas</label><input id="other" name="other" type="text" inputmode="decimal" autocomplete="off" value="0"></div>
+<small id="helpValue" class="note">Não inclua valores negativos. Campos inválidos não são contabilizados.</small>
+<div class="actions"><button type="submit">Calcular orçamento</button><button type="button" id="reset" class="secondary">Limpar valores</button></div>
+</form></section>
+<section class="panel" aria-labelledby="resultTitle" id="results"><h2 id="resultTitle">Seu resultado</h2>
+<div class="highlight" aria-live="polite" aria-atomic="true"><small>Saldo estimado do mês</small><strong id="balance">R$ 0,00</strong><small id="balanceTag">Digite os valores para começar.</small></div>
+<div class="totals"><div class="total"><small>Receitas</small><strong id="incomeTotal">R$ 0,00</strong></div><div class="total"><small>Despesas</small><strong id="expensesTotal">R$ 0,00</strong></div></div>
+<div class="bars" id="bars" aria-label="Distribuição de despesas por categoria"></div>
+<p class="narrative" id="insight" role="status">Os resultados aparecem depois de preencher o formulário.</p>
+</section>
+</div>
+<section class="next"><h2>Quer acompanhar os lançamentos ao longo do mês?</h2>
+<p>Esta calculadora é uma simulação pontual. Para registrar receitas, despesas e limites por categoria ao longo do tempo, conheça o <strong>FinControl: Finanças Pessoais</strong>, aplicativo Android da FluxTools.</p>
+<a class="btn" href="https://play.google.com/store/apps/details?id=com.app.fincontrol" rel="noopener noreferrer">Ver FinControl na Google Play ↗</a>
+<p class="note">O FinControl não é instituição financeira nem sincroniza contas bancárias. Consulte a <a href="../privacy/">Política de Privacidade</a>.</p>
+</section>
+<section class="lower"><h2>Como usar esta calculadora</h2><ol><li>Digite a sua receita disponível no mês.</li><li>Preencha as despesas efetivas de cada categoria.</li><li>Confira o saldo: receita menos despesas.</li><li>Se o saldo estiver negativo, revise as despesas e compromissos antes de assumir novos gastos.</li></ol>
+<p>Os valores desta calculadora não constituem orientação de investimento ou crédito. Para aprender mais, consulte o <a href="../guia-orcamento/">guia gratuito de orçamento mensal</a>.</p>
+</section>
+</main><footer><div class="wrap">© 2026 FluxTools · <a href="../">Página inicial</a> · <a href="../support/">Suporte</a> · <a href="../privacy/">Privacidade</a></div></footer>
+<script>
+(function(){
+  const categories=[["housing","Moradia"],["food","Alimentação"],["transport","Transporte"],["health","Saúde"],["education","Educação"],["other","Outras despesas"]];
+  const fmt=new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"});
+  const byId=id=>document.getElementById(id);
+  const parse=value=>{
+    const v=value.trim().replace(/\s/g,"");
+    if(!v)return 0;
+    const normalized=v.includes(",")?v.replace(/\./g,"").replace(",","."):v;
+    if(!/^\d+(\.\d{1,2})?$/.test(normalized))return null;
+    const num=Number(normalized);
+    return Number.isFinite(num)&&num<=999999999?num:null;
+  };
+  function calculate(e){
+    if(e)e.preventDefault();
+    const revenue=parse(byId("income").value);
+    const entries=categories.map(([id,name])=>({id,name,value:parse(byId(id).value)}));
+    const invalid=revenue===null||entries.some(x=>x.value===null);
+    if(invalid){byId("insight").textContent="Há um valor inválido. Use números positivos, com até duas casas decimais.";return}
+    const expense=entries.reduce((sum,x)=>sum+x.value,0);
+    const balance=revenue-expense;
+    byId("incomeTotal").textContent=fmt.format(revenue);
+    byId("expensesTotal").textContent=fmt.format(expense);
+    byId("balance").textContent=fmt.format(balance);
+    byId("balance").style.color=balance<0?"var(--red)":"var(--text)";
+    byId("balanceTag").textContent=balance<0?"Despesas acima das receitas":balance>0?"Receitas acima das despesas":"Saldo zerado";
+    const bars=byId("bars");bars.replaceChildren();
+    for(const entry of entries.filter(x=>x.value>0)){
+      const row=document.createElement("div");row.className="barrow";
+      const labels=document.createElement("div");labels.className="barlabels";
+      const name=document.createElement("span");name.textContent=entry.name;
+      const val=document.createElement("span");val.textContent=fmt.format(entry.value);
+      labels.append(name,val);
+      const track=document.createElement("div");track.className="track";
+      const fill=document.createElement("div");fill.className="fill";
+      fill.style.width=(expense>0?Math.min(100,entry.value/expense*100):0)+"%";
+      track.append(fill);row.append(labels,track);bars.append(row);
+    }
+    byId("insight").textContent=expense===0?"Sem despesas registradas nesta simulação.":balance<0?"As despesas informadas ultrapassam as receitas. Confira os valores e os compromissos do mês.":revenue>0?"As despesas informadas correspondem a "+(100*expense/revenue).toLocaleString("pt-BR",{maximumFractionDigits:1})+"% das receitas.":"Sem receitas registradas nesta simulação.";
+  }
+  byId("budget").addEventListener("submit",calculate);
+  byId("reset").addEventListener("click",()=>{for(const el of byId("budget").querySelectorAll("input"))el.value="0";calculate()});
+  calculate();
+})();
+</script>
+</body></html>
